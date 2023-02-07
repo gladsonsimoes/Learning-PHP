@@ -47,17 +47,19 @@ function resumo(){
 }
 }
 
+//criando um novo objeto $p
 $p = new Funcionario();
 $p ->setNome("José");
 $p ->setNumFilhos(5);
 $p ->setTelefone("2022-2222");
 
-//novo Objeto
+//criando um novo objeto $o
 $o = new Funcionario();
-$o->setNome("Maria");
-$o -> setNumFilhos(2);
+$o -> setNome("Maria");
+$o ->setNumFilhos(2);
 $o ->setTelefone("1111-1010");
 
+//imprimir o objeto $p e o objeto $o
 echo $p -> resumo();
 echo "<br>";
 echo $o -> resumo();
