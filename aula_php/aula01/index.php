@@ -20,21 +20,21 @@ function telefoneFuncionario(){
     echo "$this->telefone";//o aspas duplas nao ignora os comandos enquanto aspas simples ignoram os comando!! 
 }
 
-// function getNumFilhos(){
-//     echo $this->numFilhos;
-// }
+function getNumFilhos(){
+    echo $this->numFilhos;
+}
 
-// function setNumFilhos($numFilhos){
-//     $this->numFilhos = $numFilhos;
-// }
+function setNumFilhos($numFilhos){
+    $this->numFilhos = $numFilhos;
+}
 
-// function getNome(){
-//     echo $this->nome;
-// }
+function getNome(){
+    echo $this->nome;
+}
 
-// function setNome($nome){
-//     echo $this->nome = $nome;
-// }
+function setNome($nome){
+    echo $this->nome = $nome;
+}
 
 function getTelefone(){
     echo $this->telefone;
@@ -48,6 +48,20 @@ function resumo(){
 }
 
 $p = new Funcionario();
+$p ->setNome("José");
+$p ->setNumFilhos(5);
+$p ->setTelefone("2022-2222");
+
+//novo Objeto
+$o = new Funcionario();
+$o->setNome("Maria");
+$o -> setNumFilhos(2);
+$o ->setTelefone("1111-1010");
+
+echo $p -> resumo();
+echo "<br>";
+echo $o -> resumo();
+
 
 // echo $p -> saudacao(); //-> usado para acessar uma funcao
 // echo "<hr>";
@@ -63,12 +77,5 @@ $p = new Funcionario();
 // echo $p -> getNome();
 // echo $p -> setNome("Gladson");
 // echo $p -> getNome();
-$p ->setNome("José");
-$p ->setNumFilhos(5);
-$p ->setTelefone("2022-2222");
-
-echo $p -> resumo();
-
-
 
 ?>
