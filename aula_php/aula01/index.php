@@ -20,21 +20,21 @@ function telefoneFuncionario(){
     echo "$this->telefone";//o aspas duplas nao ignora os comandos enquanto aspas simples ignoram os comando!! 
 }
 
-function getNumFilhos(){
-    echo $this->numFilhos;
-}
+// function getNumFilhos(){
+//     echo $this->numFilhos;
+// }
 
-function setNumFilhos($numFilhos){
-    $this->numFilhos = $numFilhos;
-}
+// function setNumFilhos($numFilhos){
+//     $this->numFilhos = $numFilhos;
+// }
 
-function getNome(){
-    echo $this->nome;
-}
+// function getNome(){
+//     echo $this->nome;
+// }
 
-function setNome($nome){
-    echo $this->nome = $nome;
-}
+// function setNome($nome){
+//     echo $this->nome = $nome;
+// }
 
 function getTelefone(){
     echo $this->telefone;
