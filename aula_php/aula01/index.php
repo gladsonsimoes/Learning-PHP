@@ -17,7 +17,7 @@ class Funcionario{
 //   }
 
 function telefoneFuncionario(){
-    echo "$this->telefone";//o aspas duplas nao ignora os comandos enquanto aspas simples ignoram os comando!! 
+    echo "$this->telefone";//atencao ao usar aspas duplas nao ignora os comandos enquanto aspas simples ignoram os comando!! 
 }
 
 function getNumFilhos(){
