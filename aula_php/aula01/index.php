@@ -78,7 +78,7 @@ echo $p -> resumo();
 echo "<hr>";
 echo $o -> resumo();
 
-/* em vez de usar get e set para definir  */
+/* em vez de usar get e set para cada variavel usamos a funcao __set e __get para todas as variaveis  */
 
 echo $o -> __get('nome');
 echo "<hr>";
