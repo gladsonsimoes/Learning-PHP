@@ -35,6 +35,12 @@ class Moto extends Veiculo
         echo 'Empinando';
     }
 
+    //polimorfismo - a mesma funcao usada na classe Veiculo (só foi sobreescrito para moto!)
+    function passarMarcha()
+    {
+        return 'Segurar com a mao na embreagem colocar com o pe na marcha';
+    }
+
 }
 
 class Veiculo
@@ -48,7 +54,7 @@ class Veiculo
         echo 'Freiando';
     }
 
-    //Adicionar uma funcao
+    //Adicionar uma funcao passar marcha
     function passarMarcha()
     {
         return 'Pisar o pé na embreagem colocar com a mao a marcha';
@@ -63,8 +69,7 @@ $car->__set('marca', 'honda');
 // print_r($car);
 
 
-echo 'Carro';
-//polimorfismo acessando o metodo diretamente da classe 
+echo 'Carro'; 
 echo $car->passarMarcha();
 
 echo '<br>';
@@ -77,6 +82,7 @@ $moto->__set('marca', 'yamaha');
 // print_r($moto);
 
 echo 'Moto';
+// usando o polimorfismo a funcao vai ser a mesma só que sobreescrito
 echo $moto->passarMarcha();
 
 ?>
