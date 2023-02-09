@@ -48,7 +48,8 @@ class Veiculo
         echo 'Freiando';
     }
 
-    function passarMarcha(){
+    function passarMarcha()
+    {
         return 'Pisar o pé na embreagem colocar com a mao a marcha';
     }
 }
