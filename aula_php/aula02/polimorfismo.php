@@ -48,6 +48,7 @@ class Veiculo
         echo 'Freiando';
     }
 
+    //Adicionar uma funcao
     function passarMarcha()
     {
         return 'Pisar o pé na embreagem colocar com a mao a marcha';
@@ -61,7 +62,9 @@ $car->__set('marca', 'honda');
 // $car->freiar();
 // print_r($car);
 
+
 echo 'Carro';
+//polimorfismo acessando o metodo diretamente da classe 
 echo $car->passarMarcha();
 
 echo '<br>';
