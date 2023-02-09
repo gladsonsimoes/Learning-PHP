@@ -43,6 +43,25 @@ class Moto extends Veiculo
 
 }
 
+class Caminhao extends Veiculo
+{
+    function __get($variavel)
+    {
+        return $this->$variavel;
+    }
+
+    function __set($variavel, $valor)
+    {
+        $this->$variavel = $valor;
+    }
+
+    function empinar()
+    {
+        echo 'Empinando';
+    }
+
+}
+
 class Veiculo
 {
     public $placa;
@@ -82,7 +101,20 @@ $moto->__set('marca', 'yamaha');
 // print_r($moto);
 
 echo 'Moto';
-// usando o polimorfismo a funcao vai ser a mesma só que sobreescrito
+// usando o polimorfismo da mesma funcao vai ser a mesma, só que sobreescrito
 echo $moto->passarMarcha();
+
+$caminhao = new Caminhao();
+$caminhao->__set('placa', 'AAA-4025');
+$moto->__set('cor', 'vermelho');
+$moto->__set('marca', 'volvo');
+
+echo '<br>';
+echo 'Caminhao';
+//usando o polimorfismo d mesma funcao vai ser a mesma, sem escrever outra funcao aproveitando a classe Pai chamada Veiculo 
+echo $caminhao->passarMarcha();
+
+
+
 
 ?>
