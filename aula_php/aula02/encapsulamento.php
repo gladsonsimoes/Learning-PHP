@@ -1,20 +1,6 @@
 <?php
-class Pai
+class Carro extends Veiculo
 {
-    public $idade;
-    private $nome;
-    protected $id;
-
-    function getIdade()
-    {
-        return $this->idade;
-    }
-
-    function setIdade($idade)
-    {
-        $this->idade = $idade; //sem o cifrao porque esta puxando uma variavel
-    }
-
     function __get($variavel)
     {
         return $this->$variavel;
@@ -22,39 +8,65 @@ class Pai
 
     function __set($variavel, $valor)
     {
-        $this->$variavel = $valor; //neste caso tem cifrao porque o nome da variavel vai esta dentro
+        $this->$variavel = $valor;
+    }
+
+    function abrirTeto()
+    {
+        echo 'Abrindo Teto';
     }
 
 }
 
-$pai = new Pai();
+class Moto extends Veiculo
+{
+    function __get($variavel)
+    {
+        return $this->$variavel;
+    }
 
-//atributo Idade (public)
+    function __set($variavel, $valor)
+    {
+        $this->$variavel = $valor;
+    }
 
-//com a funcao set global
-$pai->setIdade('30');
-echo $pai->getIdade();
+    function empinar()
+    {
+        echo 'Empinando';
+    }
+
+}
+
+class Veiculo
+{
+    public $placa;
+    public $cor;
+    public $marca;
+
+    function freiar()
+    {
+        echo 'Freiando';
+    }
+}
+
+$car = new Carro();
+$car->__set('placa', 'ody-2588');
+$car->__set('cor', 'vermelho');
+$car->__set('marca', 'honda');
+echo '<br>';
+$car->freiar();
+
+//echo é diferente de print_r
+print_r($car);
+
 echo '<br>';
 
-//sem a funcao set global
-$pai->idade = 40;
-echo $pai->getIdade();
+$moto = new Moto();
+$moto->__set('placa', 'yyd-8080');
+$moto->__set('cor', 'branco');
+$moto->__set('marca', 'yamaha');
 echo '<br>';
-
-//atributo nome (private)
-
-//com a funcao set global
-$pai->__set('nome','Marcos');
-echo $pai->__get('nome');
-echo '<br>';
-
-//sem a funcao set global
-$pai->nome = 'Luan';
-echo $pai->__get('nome');
-echo '<br>';
-
-//atributo id (protected)
-
-
+$moto->empinar();
+print_r($moto);
 
 ?>
