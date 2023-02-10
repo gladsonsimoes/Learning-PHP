@@ -1,6 +1,20 @@
 <?php
-class Carro extends Veiculo
+class Pai
 {
+    public $idade;
+    private $nome;
+    protected $id;
+
+    function getIdade()
+    {
+        return $this->idade;
+    }
+
+    function setIdade($idade)
+    {
+        $this->idade = $idade; //sem o cifrao porque esta puxando uma variavel
+    }
+
     function __get($variavel)
     {
         return $this->$variavel;
@@ -8,65 +22,48 @@ class Carro extends Veiculo
 
     function __set($variavel, $valor)
     {
-        $this->$variavel = $valor;
-    }
-
-    function abrirTeto()
-    {
-        echo 'Abrindo Teto';
+        $this->$variavel = $valor; //neste caso tem cifrao porque o nome da variavel vai esta dentro
     }
 
 }
 
-class Moto extends Veiculo
-{
-    function __get($variavel)
-    {
-        return $this->$variavel;
-    }
+$pai = new Pai();
 
-    function __set($variavel, $valor)
-    {
-        $this->$variavel = $valor;
-    }
+# atributo Idade (public)
 
-    function empinar()
-    {
-        echo 'Empinando';
-    }
-
-}
-
-class Veiculo
-{
-    public $placa;
-    public $cor;
-    public $marca;
-
-    function freiar()
-    {
-        echo 'Freiando';
-    }
-}
-
-$car = new Carro();
-$car->__set('placa', 'ody-2588');
-$car->__set('cor', 'vermelho');
-$car->__set('marca', 'honda');
-echo '<br>';
-$car->freiar();
-
-//echo é diferente de print_r
-print_r($car);
-
+//com a funcao set global
+$pai->setIdade('30');
+echo $pai->getIdade();
 echo '<br>';
 
-$moto = new Moto();
-$moto->__set('placa', 'yyd-8080');
-$moto->__set('cor', 'branco');
-$moto->__set('marca', 'yamaha');
+//sem a funcao set global
+$pai->idade = 40;
+echo $pai->getIdade();
 echo '<br>';
-$moto->empinar();
-print_r($moto);
+
+# atributo nome (private)
+
+//com a funcao set global
+$pai->__set('nome','Marcos');
+echo $pai->__get('nome');
+echo '<br>';
+
+//sem a funcao set global
+$pai->nome = 'Luan';
+echo $pai->__get('nome');
+echo '<br>';
+
+# atributo id (protected)
+
+//com a funcao set global
+$id->__set('id','1');
+echo $pai->__get('id');
+echo '<br>';
+
+//sem a funcao set global
+$pai->id = '2';
+echo $pai->__get('id');
+echo '<br>';
+
 
 ?>
