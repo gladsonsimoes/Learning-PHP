@@ -1,5 +1,7 @@
 <?php
 
+/* Explicação sobre o construtor em PHP  */
+
 class Pessoa
 {
     public $nome = null;
@@ -20,6 +22,8 @@ class Pessoa
         $this->$variavel = $valor;
     }
 }
+
+//Objetos
 
 $pessoa = new Pessoa("Roberto");
 echo "<hr>";

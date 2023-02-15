@@ -1,14 +1,17 @@
 <?php
 
+/* Explicação sobre a classe , variaveis e função */
+
+
 //modelo
 class Funcionario
 {
-    //atributos
+    //variaveis
     public $nome = "José";
     public $telefone = "222222222222";
     public $numFilhos = 2;
 
-    //metodos
+    //funcoes
 //   function saudacao(){
 //     echo "Olá Mundo";
 //   }
@@ -16,6 +19,8 @@ class Funcionario
     //   function nomeFuncionario(){
 //     echo $this->nome; //this é usado para chamar um atributo 
 //   }
+
+
 
     function telefoneFuncionario()
     {
