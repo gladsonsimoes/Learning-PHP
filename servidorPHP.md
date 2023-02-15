@@ -6,4 +6,4 @@ php -version
 
 cd diretory
 
-php -s localhost:80
+php -S localhost:80
