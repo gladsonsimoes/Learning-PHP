@@ -1,4 +1,13 @@
 <?php
+
+
+/*
+Definimos Polimorfismo como um princípio a partir do qual as classes derivadas 
+de uma única classe base são capazes de invocar os métodos que,
+embora apresentem a mesma assinatura,
+comportam-se de maneira diferente para cada uma das classes derivadas.
+*/
+
 class Carro extends Veiculo
 {
     function __get($variavel)
@@ -62,6 +71,7 @@ class Caminhao extends Veiculo
 
 }
 
+//Classe Base
 class Veiculo
 {
     public $placa;
@@ -79,6 +89,8 @@ class Veiculo
         return 'Pisar o pé na embreagem colocar com a mao a marcha';
     }
 }
+
+
 
 $car = new Carro();
 $car->__set('placa', 'ody-2588');
