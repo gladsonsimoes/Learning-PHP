@@ -1,5 +1,12 @@
 <?php
 
+/*
+A Herança possibilita que as classes compartilhem seus atributos, 
+métodos e outros membros da classe entre si. 
+Para a ligação entre as classes, a herança adota um relacionamento esquematizado hierarquicamente
+*/
+
+//classe base
 class Veiculo
 {
     public $placa;
@@ -51,14 +58,18 @@ class Moto extends Veiculo
 
 }
 
+//variavel instanciando o objeto Carro
 $car = new Carro();
+
+//adicionando valores nas variaveis disponiveis na Classe base
 $car->__set('placa', 'ody-2588');
 $car->__set('cor', 'vermelho');
 $car->__set('marca', 'honda');
 echo '<br>';
+
+//pegando a funcao da classe base 
 $car->freiar();
 
-//echo é diferente de print_r
 print_r($car);
 
 echo '<br>';
