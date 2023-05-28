@@ -1,4 +1,18 @@
 <?php
+
+class Veiculo
+{
+    public $placa;
+    public $cor;
+    public $marca;
+
+    function freiar()
+    {
+        echo 'Freiando';
+    }
+}
+
+
 class Carro extends Veiculo
 {
     function __get($variavel)
@@ -35,18 +49,6 @@ class Moto extends Veiculo
         echo 'Empinando';
     }
 
-}
-
-class Veiculo
-{
-    public $placa;
-    public $cor;
-    public $marca;
-
-    function freiar()
-    {
-        echo 'Freiando';
-    }
 }
 
 $car = new Carro();
